@@ -1,0 +1,38 @@
+<div class="container">
+    <h2>IMC : formule pour calculer son indice de masse corporelle, normes</h2>
+    <form>
+    <div class="form-group">
+        <label >Votre taille (en cm)</label>
+                <input  required type="number" ngModel name="taille" #taille="ngModel" class="form-control" placeholder="taille"> 
+                <div class="alert alert-danger" *ngIf="! taille.valid && taille.touched">
+                    Ce champ est obligatoire
+                </div>
+                <br>
+                <label >Votre poids (en kg)</label>
+                <input  required type="number" ngModel name="poids" #poids="ngModel" class="form-control" placeholder="poids"> 
+                <div class="alert alert-danger" *ngIf="! poids.valid && poids.touched">
+                    Ce champ est obligatoire
+                </div>
+
+                <br>
+                <button class="btn btn-primary" (click)="ImcFormule(poids.value,taille.value)">JE CALCULE MON IMC</button>
+
+                <div class="container2" *ngIf="imc">
+                    <h3>Resultat : </h3>
+                    <p>Votre IMC (indice de masse corporelle) est de :</p>
+
+                    <span class="resultat">
+                        {{imc.toFixed(1)}}
+                    </span>
+                  <br>
+                    <span class="msg">
+                        {{msg}}
+                    </span>
+                    <p class="detail">
+                        {{detail}}
+                    </p>
+                   
+                </div>
+    </div>
+    </form>
+</div>

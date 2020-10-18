@@ -1,0 +1,22 @@
+.container{
+    margin-top: 30px;
+    text-align: center;
+ 
+}
+.resultat{
+    color: deepskyblue;
+    font-size: 80px
+}
+.msg{
+    color: crimson;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.container2{
+    margin-top: 12px;
+    background-color: beige;
+    padding: 30px 30px;
+}
+.detail{
+    font-weight: bold;
+}
